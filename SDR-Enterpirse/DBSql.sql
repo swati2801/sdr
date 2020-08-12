@@ -1,0 +1,20 @@
+CREATE TABLE `product` (
+  `ID` int NOT NULL,
+  `NAME` varchar(45) NOT NULL,
+  `CREATE_DATE` datetime DEFAULT NULL,
+  `UPDATE_DATE` datetime DEFAULT NULL,
+  `FINAL_PRODUCT_ID` int DEFAULT NULL,
+  `QUANTITY` int DEFAULT NULL,
+  `TYPE` int DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='Final product details';
+
+
+CREATE TABLE `sdr`.`product_flow` (
+  `ID` INT NOT NULL,
+  `PRODUCT_ID` INT NOT NULL,
+  `ADD` INT NULL,
+  `DEDUCT` INT NULL,
+  `DATE` DATE NULL,
+  `CREATED_ON` DATE NULL,
+  PRIMARY KEY (`ID`));
