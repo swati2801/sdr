@@ -114,7 +114,7 @@ public class ProductResource {
 	}
 	
 	
-	@Operation(summary = "Get Raw MAterial list By Final Product ID",
+	@Operation(summary = "Get Raw Material list By Final Product ID",
 			description = "This API get Raw MAterial list By Final Product ID from the DB", responses = {
 			@ApiResponse(responseCode = "200", description = "Success", content = @Content(mediaType = "application/json")),
 			@ApiResponse(responseCode = "404", description = "Not found", content = @Content(mediaType = "application/json")) })
