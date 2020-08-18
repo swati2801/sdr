@@ -6,6 +6,8 @@ import java.util.List;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -42,9 +44,11 @@ public class ResidentResource {
 	@Autowired
 	private ResidentService service;
 	
+	private static final Logger LOGGER=LoggerFactory.getLogger(ResidentResource.class);
+	
 	@GetMapping(path = "hello")
-	public String hello() {		
-		return "Hello Swati..!! Yooo!..!! This is test method..!!";
+	public void hello() {		
+		LOGGER.info("Hello Swati..!! Yooo!..!! This is test method..!!");
 	}
 
 	@Operation(summary = "List All residents", description = "This API gets all the residents record availible in DB", responses = {
